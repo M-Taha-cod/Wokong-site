@@ -1,0 +1,1293 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kavivanar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "poppins", "sans-serif";
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.main-div {
+  height: 200vh;
+  width: 100%;
+  background-image: url(images/bkm-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.weapon-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-line {
+  position: absolute;
+  top: 30%;
+  height: 145vh;
+  width: 10px;
+  background-color: gold;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.8),
+    rgba(255, 165, 0, 0.8),
+    rgba(255, 0, 0, 0.8)
+  );
+  background-size: 200% 100%;
+  animation: flame 0.5s infinite alternate;
+  box-shadow: 0px 0px 50px 30px rgb(255, 166, 0);
+  border-radius: 50px;
+}
+
+@keyframes flame {
+  0% {
+    background-position: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 100% 50%;
+    opacity: 0.7;
+  }
+}
+
+.header {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+}
+
+.str-header {
+  position: absolute;
+  height: 30vh;
+  width: 180vh;
+  top: -80%;
+  z-index: 1;
+}
+
+.header-lbtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  z-index: 2;
+  left: 17%;
+  top: 65%;
+}
+
+.header-lbtns button,
+.header-rbtns button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header-lbtns button:hover {
+  color: rgb(134, 134, 134);
+}
+
+.back-text {
+  position: absolute;
+  z-index: 2;
+  height: 100px;
+  top: 10%;
+}
+
+.header-rbtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  z-index: 2;
+  top: 55%;
+  right: 20%;
+}
+
+.header-rbtns button:hover {
+  color: rgb(134, 134, 134);
+}
+
+.header-rbtns i:hover {
+  color: rgb(134, 134, 134);
+}
+
+.header-rbtns i {
+  color: white;
+  cursor: pointer;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 1%;
+  right: 3%;
+  font-size: 20px;
+  color: white;
+  z-index: 100;
+}
+
+.fixed1 {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  font-size: 20px;
+  color: white;
+  z-index: 100;
+}
+
+.fixed-text {
+  position: fixed;
+  bottom: 1%;
+  left: 1%;
+  font-weight: bold;
+  color: white;
+  cursor: default;
+  z-index: 100;
+}
+
+.scroll-btns {
+  width: 5vh;
+  height: 50vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 3%;
+  top: 30%;
+  z-index: 100;
+}
+
+.scroll-btns button {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(90, 90, 90);
+  box-shadow: 0px 0px 10px 1px rgb(65, 65, 65);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.scroll-btns hr {
+  height: 6vh;
+  width: 1px;
+  border: 1px solid rgb(155, 153, 153);
+  box-shadow: 0px 0px 5px 1px rgb(221, 120, 26);
+}
+
+.sec-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  color: white;
+  font-size: 50px;
+}
+
+.scroll-button.active {
+  background-color: #ff4500;
+  overflow: hidden;
+  transition: transform 0.3s;
+  box-shadow: 0px 0px 10px 5px #ff4500;
+}
+
+.dest-text {
+  height: 1vh;
+  width: 10vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 35%;
+  left: 15%;
+}
+
+.dest-text p {
+  position: absolute;
+  font-size: 90px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Kavivanar", serif;
+  font-weight: 400;
+  font-style: normal; */
+  color: white;
+  text-shadow: 0px 2px 10px black;
+}
+
+.dest-text p:nth-child(2) {
+  top: 14vh;
+}
+
+.dis-text {
+  font-size: 15px;
+  color: white;
+  width: 32%;
+  position: absolute;
+  top: 45%;
+  right: 5%;
+  font-weight: bold;
+  text-shadow: 0px 2px 10px black;
+}
+
+.weapon {
+  position: absolute;
+  height: 155vh;
+  top: 26%;
+  z-index: 2;
+}
+
+.back-text1 {
+  filter: opacity(0.7);
+  height: 400px;
+  position: absolute;
+  bottom: -100vh;
+  z-index: 3;
+}
+
+.sec-div p {
+  position: absolute;
+  font-size: 70px;
+  width: 100vh;
+  text-align: center;
+  font-family: "Metal Mania", serif;
+  font-weight: 400;
+  font-style: normal;
+  bottom: -85vh;
+  z-index: 3;
+  cursor: default;
+}
+
+.third-div {
+  height: 100vh;
+  background-image: url(./images/dragon-man.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.black-wokong {
+  position: absolute;
+  bottom: 0px;
+  height: 600px;
+  right: 0px;
+}
+
+.third-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  z-index: 4;
+  width: 600px;
+  top: 30%;
+  left: 15%;
+  cursor: default;
+}
+
+.third-t1 {
+  font-size: 50px;
+  font-family: "Elsie", serif;
+  font-weight: 900;
+  font-style: normal;
+  color: white;
+  text-shadow: 0px 1px 10px black;
+}
+
+.plays-iconsdiv {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.plays-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-shadow: 0px 1px 10px black;
+  color: white;
+}
+
+.plays-icons i {
+  font-size: 25px;
+}
+
+.plays-icons p {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.brush-btn {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.brush-btn img {
+  height: 100px;
+  width: 300px;
+}
+
+.brush-btn p {
+  position: absolute;
+  top: 35%;
+  left: 17%;
+  font-size: 20px;
+  text-shadow: 0px 1px 10px black;
+  font-weight: bold;
+}
+
+.third-infotext {
+  width: 350px;
+  font-size: 15px;
+  text-shadow: 0px 1px 10px black;
+  color: white;
+}
+
+.forth-div {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+
+.forth-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 100vh;
+  width: 100%;
+}
+
+.forth-section img {
+  box-shadow: 0px 0px 30px 1px rgb(189, 30, 30);
+}
+
+.bmw-img1 {
+  height: 25vh;
+}
+
+.bmw-img2 {
+  height: 25vh;
+}
+
+.bmw-img3 {
+  height: 30vh;
+}
+
+.forth-section p {
+  height: 10vh;
+  color: darkred;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Metal Mania", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0px 2px 20px darkred;
+  cursor: default;
+}
+
+@media (max-width: 2560px) and (min-width: 2000px) {
+  .header-lbtns {
+    gap: 40px;
+  }
+
+  .header-lbtns button {
+    font-size: 30px;
+  }
+
+  .header-rbtns {
+    gap: 60px;
+  }
+
+  .header-rbtns button {
+    font-size: 30px;
+  }
+
+  .header-rbtns i {
+    font-size: 30px;
+  }
+
+  .back-text {
+    height: 200px;
+  }
+
+  .fixed {
+    font-size: 50px;
+    right: 4%;
+  }
+
+  .fixed1 {
+    font-size: 50px;
+  }
+
+  .fixed-text {
+    font-size: 30px;
+  }
+
+  .scroll-btns button {
+    height: 40px;
+    width: 40px;
+  }
+
+  .dest-text p {
+    font-size: 150px;
+  }
+
+  .dis-text {
+    font-size: 25px;
+  }
+
+  .back-text1 {
+    height: 800px;
+  }
+
+  .sec-div p {
+    font-size: 150px;
+  }
+
+  .black-wokong {
+    height: 1250px;
+  }
+
+  .third-t1 {
+    font-size: 80px;
+  }
+
+  .plays-icons i {
+    font-size: 45px;
+  }
+
+  .plays-icons p {
+    font-size: 35px;
+  }
+
+  .brush-btn img {
+    height: 200px;
+    width: 500px;
+  }
+
+  .brush-btn p {
+    left: 23%;
+    font-size: 40px;
+  }
+
+  .third-infotext {
+    width: 550px;
+    font-size: 20px;
+  }
+
+  .forth-section p {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1999px) and (min-width: 1800px) {
+  .header-lbtns {
+    gap: 30px;
+  }
+
+  .header-lbtns button {
+    font-size: 25px;
+  }
+
+  .header-rbtns {
+    gap: 60px;
+  }
+
+  .header-rbtns button {
+    font-size: 25px;
+  }
+
+  .header-rbtns i {
+    font-size: 25px;
+  }
+
+  .back-text {
+    height: 130px;
+  }
+
+  .fixed {
+    font-size: 40px;
+    right: 4%;
+  }
+
+  .fixed1 {
+    font-size: 40px;
+  }
+
+  .fixed-text {
+    font-size: 25px;
+  }
+
+  .scroll-btns button {
+    height: 35px;
+    width: 35px;
+  }
+
+  .dest-text p {
+    font-size: 120px;
+  }
+
+  .dis-text {
+    font-size: 20px;
+  }
+
+  .back-text1 {
+    height: 700px;
+  }
+
+  .sec-div p {
+    font-size: 120px;
+  }
+
+  .black-wokong {
+    height: 950px;
+  }
+
+  .third-t1 {
+    font-size: 80px;
+  }
+
+  .plays-icons i {
+    font-size: 45px;
+  }
+
+  .plays-icons p {
+    font-size: 35px;
+  }
+
+  .brush-btn img {
+    height: 200px;
+    width: 500px;
+  }
+
+  .brush-btn p {
+    left: 23%;
+    font-size: 40px;
+  }
+
+  .third-infotext {
+    width: 550px;
+    font-size: 20px;
+  }
+
+  .forth-section p {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1799px) and (min-width: 1500px) {
+  .header-lbtns {
+    gap: 20px;
+  }
+
+  .header-lbtns button {
+    font-size: 20px;
+  }
+
+  .header-rbtns {
+    gap: 60px;
+  }
+
+  .header-rbtns button {
+    font-size: 20px;
+  }
+
+  .header-rbtns i {
+    font-size: 20px;
+  }
+
+  .back-text {
+    height: 120px;
+  }
+
+  .fixed {
+    font-size: 30px;
+    right: 4%;
+  }
+
+  .fixed1 {
+    font-size: 30px;
+  }
+
+  .fixed-text {
+    font-size: 20px;
+  }
+
+  .scroll-btns button {
+    height: 30px;
+    width: 30px;
+  }
+
+  .dest-text p {
+    font-size: 100px;
+  }
+
+  .dis-text {
+    font-size: 20px;
+  }
+
+  .back-text1 {
+    height: 600px;
+  }
+
+  .sec-div p {
+    font-size: 100px;
+  }
+
+  .black-wokong {
+    height: 800px;
+  }
+
+  .third-t1 {
+    font-size: 60px;
+  }
+
+  .plays-icons i {
+    font-size: 35px;
+  }
+
+  .plays-icons p {
+    font-size: 25px;
+  }
+
+  .brush-btn img {
+    height: 150px;
+    width: 400px;
+  }
+
+  .brush-btn p {
+    left: 23%;
+    font-size: 30px;
+  }
+
+  .third-infotext {
+    width: 550px;
+    font-size: 18px;
+  }
+
+  .forth-section p {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1499px) and (min-width: 1390px) {
+  .header-lbtns {
+    gap: 20px;
+  }
+
+  .header-lbtns button {
+    font-size: 20px;
+  }
+
+  .header-rbtns {
+    gap: 60px;
+  }
+
+  .header-rbtns button {
+    font-size: 20px;
+  }
+
+  .header-rbtns i {
+    font-size: 20px;
+  }
+
+  .back-text {
+    height: 120px;
+  }
+
+  .fixed {
+    font-size: 30px;
+    right: 4%;
+  }
+
+  .fixed1 {
+    font-size: 30px;
+  }
+
+  .fixed-text {
+    font-size: 20px;
+  }
+
+  .scroll-btns button {
+    height: 30px;
+    width: 30px;
+  }
+
+  .dest-text p {
+    font-size: 100px;
+  }
+
+  .dis-text {
+    font-size: 20px;
+  }
+
+  .back-text1 {
+    height: 600px;
+  }
+
+  .sec-div p {
+    font-size: 100px;
+  }
+
+  .black-wokong {
+    height: 800px;
+  }
+
+  .third-t1 {
+    font-size: 60px;
+  }
+
+  .plays-icons i {
+    font-size: 35px;
+  }
+
+  .plays-icons p {
+    font-size: 25px;
+  }
+
+  .brush-btn img {
+    height: 150px;
+    width: 400px;
+  }
+
+  .brush-btn p {
+    left: 23%;
+    font-size: 30px;
+  }
+
+  .third-infotext {
+    width: 550px;
+    font-size: 18px;
+  }
+
+  .forth-section p {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 900px) and (min-width: 700px) {
+  .str-header {
+    height: 20vh;
+    width: 70vh;
+    top: -40%;
+  }
+
+  .header-lbtns {
+    gap: 10px;
+    z-index: 2;
+    left: 15%;
+    top: 60%;
+  }
+
+  .header-lbtns button,
+  .header-rbtns button {
+    font-size: 13px;
+  }
+
+  .back-text {
+    height: 80px;
+    top: 25%;
+    left: 45%;
+  }
+
+  .header-rbtns {
+    gap: 20px;
+    top: 55%;
+    right: 20%;
+  }
+
+  .fixed {
+    bottom: 1%;
+    right: 5%;
+  }
+
+  .fixed1 {
+    bottom: 1%;
+    right: 1%;
+  }
+
+  .fixed-text {
+    bottom: 1%;
+    left: 1%;
+  }
+
+  .scroll-btns {
+    width: 5vh;
+    height: 50vh;
+    left: 3%;
+    top: 30%;
+  }
+
+  .scroll-btns button {
+    height: 20px;
+    width: 20px;
+  }
+
+  .scroll-btns hr {
+    height: 6vh;
+    width: 1px;
+  }
+
+  .dest-text {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    z-index: 5;
+  }
+
+  .dest-text p {
+    position: absolute;
+    font-size: 90px;
+  }
+
+  .dest-text p:nth-child(2) {
+    top: 0;
+    left: 45%;
+  }
+
+  .dis-text {
+    font-size: 15px;
+    color: white;
+    width: 80%;
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    font-weight: bold;
+    text-shadow: 0px 2px 10px black;
+    z-index: 5;
+    text-align: center;
+  }
+
+  .back-text1 {
+    height: 400px;
+  }
+
+  .sec-div p {
+    font-size: 50px;
+  }
+
+  .black-wokong {
+    height: 100%;
+    right: -150px;
+  }
+
+  .third-info {
+    width: 600px;
+    top: 50%;
+    left: 15%;
+  }
+
+  .forth-section img {
+    box-shadow: 0px 0px 30px 1px rgb(189, 30, 30);
+  }
+
+  .bmw-img1 {
+    height: 25vh;
+  }
+
+  .bmw-img2 {
+    height: 25vh;
+  }
+
+  .bmw-img3 {
+    height: 30vh;
+  }
+
+  .forth-section p {
+    height: 10vh;
+    color: darkred;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Metal Mania", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0px 2px 20px darkred;
+    cursor: default;
+  }
+}
+
+@media (max-width: 699px) and (min-width: 500px) {
+  .str-header {
+    height: 20vh;
+    width: 100%;
+    top: -40%;
+  }
+
+  .header-lbtns {
+    gap: 10px;
+    z-index: 2;
+    left: 12%;
+    top: 60%;
+  }
+
+  .header-lbtns button,
+  .header-rbtns button {
+    font-size: 12px;
+  }
+
+  .back-text {
+    height: 50px;
+    top: 35%;
+    left: 50%;
+  }
+
+  .header-rbtns {
+    gap: 20px;
+    top: 55%;
+    right: 20%;
+  }
+
+  .fixed {
+    bottom: 1%;
+    right: 7%;
+  }
+
+  .fixed1 {
+    bottom: 1%;
+    right: 1%;
+  }
+
+  .fixed-text {
+    bottom: 1%;
+    left: 1%;
+  }
+
+  .scroll-btns {
+    width: 5vh;
+    height: 50vh;
+    left: 3%;
+    top: 30%;
+  }
+
+  .scroll-btns button {
+    height: 20px;
+    width: 20px;
+  }
+
+  .scroll-btns hr {
+    height: 6vh;
+    width: 1px;
+  }
+
+  .dest-text {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    z-index: 5;
+  }
+
+  .dest-text p {
+    position: absolute;
+    font-size: 70px;
+  }
+
+  .dest-text p:nth-child(2) {
+    top: 0;
+    left: 45%;
+  }
+
+  .dis-text {
+    font-size: 15px;
+    color: white;
+    width: 80%;
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    font-weight: bold;
+    text-shadow: 0px 2px 10px black;
+    z-index: 5;
+    text-align: center;
+  }
+
+  .back-text1 {
+    height: 300px;
+  }
+
+  .sec-div p {
+    font-size: 30px;
+  }
+
+  .black-wokong {
+    height: 100%;
+    right: -150px;
+  }
+
+  .third-info {
+    width: 600px;
+    top: 50%;
+    left: 15%;
+  }
+
+  .forth-section img {
+    box-shadow: 0px 0px 30px 1px rgb(189, 30, 30);
+  }
+
+  .bmw-img1 {
+    height: 25vh;
+  }
+
+  .bmw-img2 {
+    height: 25vh;
+  }
+
+  .bmw-img3 {
+    height: 30vh;
+  }
+
+  .forth-section p {
+    height: 10vh;
+    color: darkred;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Metal Mania", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0px 2px 20px darkred;
+    cursor: default;
+  }
+}
+
+@media (max-width: 499px) and (min-width: 300px) {
+  .str-header {
+    height: 20vh;
+    width: 100%;
+    top: -40%;
+  }
+
+  .header-lbtns {
+    gap: 5px;
+    z-index: 2;
+    left: 12%;
+    top: 55%;
+  }
+
+  .hide-btn {
+    display: none;
+  }
+
+  .header-lbtns button,
+  .header-rbtns button {
+    font-size: 12px;
+  }
+
+  .back-text {
+    height: 50px;
+    top: 35%;
+    left: 52%;
+  }
+
+  .header-rbtns {
+    gap: 5px;
+    top: 55%;
+    right: 15%;
+  }
+
+  .fixed {
+    bottom: 1%;
+    right: 9%;
+  }
+
+  .fixed1 {
+    bottom: 1%;
+    right: 1%;
+  }
+
+  .fixed-text {
+    bottom: 1%;
+    left: 1%;
+  }
+
+  .scroll-btns {
+    width: 5vh;
+    height: 50vh;
+    left: 3%;
+    top: 30%;
+  }
+
+  .scroll-btns button {
+    height: 20px;
+    width: 20px;
+  }
+
+  .scroll-btns hr {
+    height: 6vh;
+    width: 1px;
+  }
+
+  .dest-text {
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    z-index: 5;
+  }
+
+  .dest-text p {
+    position: absolute;
+    font-size: 70px;
+  }
+
+  .dest-text p:nth-child(2) {
+    top: 25%;
+    left: 0%;
+  }
+
+  .dis-text {
+    font-size: 15px;
+    color: white;
+    width: 80%;
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    font-weight: bold;
+    text-shadow: 0px 2px 10px black;
+    z-index: 5;
+    text-align: center;
+  }
+
+  .back-text1 {
+    height: 250px;
+  }
+
+  .sec-div p {
+    font-size: 25px;
+  }
+
+  .black-wokong {
+    height: 100%;
+    right: -150px;
+  }
+
+  .third-info {
+    width: 600px;
+    top: 40%;
+    left: 15%;
+  }
+
+  .third-t1 {
+    font-size: 40px;
+    font-family: "Elsie", serif;
+    font-weight: 900;
+    font-style: normal;
+    color: white;
+    text-shadow: 0px 1px 10px black;
+  }
+
+  .plays-iconsdiv {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .plays-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-shadow: 0px 1px 10px black;
+    color: white;
+  }
+
+  .plays-icons i {
+    font-size: 25px;
+  }
+
+  .plays-icons p {
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .brush-btn {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .brush-btn img {
+    height: 100px;
+    width: 300px;
+  }
+
+  .brush-btn p {
+    position: absolute;
+    top: 35%;
+    left: 17%;
+    font-size: 20px;
+    text-shadow: 0px 1px 10px black;
+    font-weight: bold;
+  }
+
+  .third-infotext {
+    width: 300px;
+    font-size: 15px;
+    text-shadow: 0px 1px 10px black;
+    color: white;
+  }
+
+  .forth-section img {
+    box-shadow: 0px 0px 30px 1px rgb(189, 30, 30);
+  }
+
+  .bmw-img1 {
+    height: 25vh;
+  }
+
+  .bmw-img2 {
+    height: 25vh;
+  }
+
+  .bmw-img3 {
+    height: 30vh;
+  }
+
+  .forth-section p {
+    height: 10vh;
+    color: darkred;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Metal Mania", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 0px 2px 20px darkred;
+    cursor: default;
+  }
+}

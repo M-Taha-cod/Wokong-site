@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "poppins", "sans-serif";
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url(images/hd_image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.main-div {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.background-img {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-image: url(images/hd_image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+}
+
+.main-div .smoke1,
+.main-div .smoke2,
+.main-div .smoke3,
+.main-div .smoke4,
+.main-div .smoke5,
+.main-div .smoke6 {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.3;
+  /* transform: translateX(-50%); */
+}
+
+.main-div .smoke1 {
+  bottom: -40%;
+  left: -25%;
+}
+
+.main-div .smoke2 {
+  bottom: -30%;
+  left: 0%;
+}
+
+.main-div .smoke3 {
+  bottom: -30%;
+  left: 20%;
+}
+
+.main-div .smoke4 {
+  bottom: -40%;
+  left: 30%;
+}
+
+.main-div .smoke5 {
+  right: -40%;
+  bottom: -10%;
+}
+
+.main-div .smoke6 {
+  left: -40%;
+  top: -40%;
+}
+
+.wokong-text {
+  position: absolute;
+  height: 60vh;
+  left: 25%;
+  top: 5%;
+}
+
+.des-text {
+  width: 40%;
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Metal Mania", serif;
+  font-weight: thin;
+  font-style: normal;
+  top: 50%;
+  left: 30%;
+  cursor: default;
+}
+
+.glowing-button {
+  font-size: 20px;
+  font-family: "Metal Mania", serif;
+  font-weight: thin;
+  font-style: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  width: 120px; /* Button size */
+  height: 120px; /* Button size */
+  border-radius: 50%; /* Makes the button circular */
+  background-color: #f0d331; /* Golden color */
+  box-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 60px #ffd700; /* Glowing effect */
+  transition: box-shadow 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.glowing-button:hover {
+  box-shadow: 0 0 30px #ffd700, 0 0 50px #ffd700, 0 0 70px #ffd700; /* Enhanced glow on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  text-shadow: 0px 0px 5px black;
+}
+
+.fade-out {
+  opacity: 0; /* Fade out effect */
+}
+
+@media (max-width: 2560px) and (min-width: 2000px) {
+  .des-text {
+    font-size: 25px;
+    width: 50%;
+  }
+
+  .glowing-button {
+    height: 350px;
+    width: 350px;
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 1999px) and (min-width: 1700px) {
+  .des-text {
+    font-size: 25px;
+    width: 50%;
+  }
+
+  .glowing-button {
+    height: 280px;
+    width: 280px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1699px) and (min-width: 1500px) {
+  .des-text {
+    font-size: 20px;
+    width: 50%;
+  }
+
+  .glowing-button {
+    height: 210px;
+    width: 210px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1499px) and (min-width: 1400px) {
+  .des-text {
+    font-size: 20px;
+    width: 50%;
+  }
+
+  .glowing-button {
+    height: 200px;
+    width: 200px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 1000px) {
+  .des-text {
+    font-size: 20px;
+    width: 50%;
+  }
+
+  .glowing-button {
+    height: 150px;
+    width: 150px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 999px) and (min-width: 600px) {
+  .wokong-text {
+    left: 7%;
+    top: 15%;
+    height: 35vh;
+  }
+
+  .des-text {
+    font-size: 20px;
+    width: 80%;
+    left: 10%;
+    top: 45%;
+  }
+
+  .glowing-button {
+    height: 200px;
+    width: 200px;
+    font-size: 20px;
+    left: 40%;
+    top: 60%;
+  }
+}
+
+@media (max-width: 500px) and (min-width: 300px) {
+  .wokong-text {
+    left: 3%;
+    top: 15%;
+    height: 25vh;
+  }
+
+  .des-text {
+    font-size: 17px;
+    width: 80%;
+    left: 10%;
+    top: 40%;
+  }
+
+  .glowing-button {
+    height: 200px;
+    width: 200px;
+    font-size: 30px;
+    left: 30%;
+    top: 60%;
+  }
+}
